@@ -11,11 +11,11 @@ import { Link } from "react-router-dom";
     },
 
     validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
+      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Некорректный email"),
       password: (value) =>
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(\W|_)).{5,}$/.test(value)
           ? null
-          : "Invalid password",
+          : "Некорректный пароль",
     },
   });
 
@@ -31,13 +31,13 @@ import { Link } from "react-router-dom";
         <TextInput
           withAsterisk
           label="Email"
-          placeholder="your@email.com"
+          placeholder=""
           {...form.getInputProps("email")}
         />
         <TextInput
           withAsterisk
           label="Пароль"
-          placeholder="password"
+          placeholder=""
           {...form.getInputProps("password")}
         />
         <Group mt="md" justify="space-between">
